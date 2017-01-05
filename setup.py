@@ -9,7 +9,7 @@ DESCRIPTION = 'Minimal SQuaRE API wrapper for keeper.lsst.codes product status'
 AUTHOR = 'Adam Thornton'
 AUTHOR_EMAIL = 'athornton@lsst.org'
 URL = 'https://github.com/lsst-sqre/sqre-uservice-productstatus'
-VERSION = '0.0.5'
+VERSION = '0.0.1'
 LICENSE = 'MIT'
 
 

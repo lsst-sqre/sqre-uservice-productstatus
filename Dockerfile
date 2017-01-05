@@ -1,7 +1,7 @@
 FROM       centos:7
 MAINTAINER sqre-admin
-LABEL      version="0.0.1"
-           description="LSST DM/SQuaRE keeper.lsst.codes product status"
+LABEL      version="0.0.1" \
+           description="LSST DM/SQuaRE keeper.lsst.codes product status" \
            name="lsstsqre/uservice-productstatus"
 
 USER       root
