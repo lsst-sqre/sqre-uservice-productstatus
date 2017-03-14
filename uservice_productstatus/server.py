@@ -8,7 +8,7 @@ except ImportError:
     JSONDecodeError = ValueError
 from threading import Thread, Lock
 import requests
-from apikit import APIFlask as apf
+from apikit import APIFlask as APF
 from apikit import BackendError
 from flask import jsonify
 
@@ -17,8 +17,8 @@ def server(run_standalone=False):
     """Create the app and then run it."""
     # Add "/productstatus" for mapping behind api.lsst.codes
     baseuri = "https://keeper.lsst.codes"
-    app = apf(name="uservice-productstatus",
-              version="0.0.1",
+    app = APF(name="uservice-productstatus",
+              version="0.0.2",
               repository="https://github.com/sqre-lsst/" +
               "sqre-uservice-productstatus",
               description="API wrapper for product status",
@@ -60,6 +60,8 @@ def server(run_standalone=False):
 
     if run_standalone:
         app.run(host='0.0.0.0', threaded=True)
+    # Otherwise, we're being called under uwsgi, so cough up the app.
+    return app
 
 
 def _get_max_status_code(responses):

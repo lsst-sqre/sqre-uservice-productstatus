@@ -41,7 +41,7 @@ setup(
     keywords='lsst',
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=[
-        'sqre-apikit==0.0.10'
+        'sqre-apikit==0.0.11'
     ],
     tests_require=['pytest'],
     entry_points={
